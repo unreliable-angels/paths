@@ -10,6 +10,7 @@ function _erase_paths_read_number_to_erase
         if set -q fish_user_paths[$number]
             echo "Erasing $fish_user_paths[$number]"
             set --erase --universal fish_user_paths[$number]
+            set --erase --global fish_user_paths[$number]
             return 0
         else
             echo "Index [$number] does not exist in fish_user_paths"
